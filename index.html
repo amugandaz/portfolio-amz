@@ -8,7 +8,31 @@
     <link rel="icon" href="images/logo.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
+    <script>
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+        });
+    </script>
+    <script>
+        document.addEventListener('keydown', function (event) {
+            // Bloque F12
+            if (event.key === "F12") {
+                event.preventDefault();
+            }
+            // Bloque Ctrl+Shift+I (Inspecter)
+            if (event.ctrlKey && event.shiftKey && event.key === "I") {
+                event.preventDefault();
+            }
+            // Bloque Ctrl+U (Afficher le code source)
+            if (event.ctrlKey && event.key === "u") {
+                event.preventDefault();
+            }
+        });
+    </script>
+    <script>
+        console.log("%cSTOP!", "color: red; font-size: 50px; font-weight: bold;");
+        console.log("Inspecter le code source est une infraction au respect de l'auteur.");
+    </script>            
 </head>
 <body>
     <header class="navbar">
